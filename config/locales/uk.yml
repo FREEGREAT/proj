@@ -1,0 +1,7 @@
+uk:
+    welcome: 
+        title: "Привіт світ"
+    navbar:
+        menu:
+            table: "Таблиця"
+            graphics: "Графік"
