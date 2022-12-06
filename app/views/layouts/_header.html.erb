@@ -41,14 +41,20 @@
         <form hidden class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
           <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
         </form>
-        <div class="text-end"> 
-          <%= link_to new_user_session_path do%>
-            <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <%end%>
-          <%= link_to new_user_registration_path do%>
-            <button type="button"   class="btn  btn-warning">Sign-up</button>
-          <%end%>
-        </div>
+        <%- if user_signed_in?  %>
+          <div class="text-end">
+             <%= button_to 'Logout', destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "btn btn-outline-light me-2" %>
+          </div>
+        <% else %>
+          <div class="text-end"> 
+            <%= link_to new_user_session_path do%>
+              <button type="button" class="btn btn-outline-light me-2">Login</button>
+            <%end%>
+            <%= link_to new_user_registration_path do%>
+              <button type="button"   class="btn  btn-warning">Sign-up</button>
+            <%end%>
+          </div>
+        <%end%>
       </div>
     </div>
   </header>
