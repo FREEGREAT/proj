@@ -1,0 +1,27 @@
+<main>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody id='items'>
+              <tr >
+              <%= render @item %>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+</main>
+
+<div>
+  <%= link_to edit_item_path(@item) do  %>
+    <button type="button" class="btn btn-warning me-2">Edit this item</button>
+  <% end %>
+  <%= link_to  items_path do %>
+    <button type="button" class="btn btn-secondary me-2">Back to items</button>
+  <% end %>
+  <%= button_to "Delete",  @item, method: :delete, class: "btn btn-danger me-2" %>
+</div>
