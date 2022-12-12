@@ -19,6 +19,10 @@ gem "bootsnap", require: false
 gem 'bootstrap', '~> 5.2.3'
 gem 'jquery-rails'
 
+#chartkick
+gem "chartkick"
+gem "groupdate"
+
 #auth 
 gem 'devise'
 

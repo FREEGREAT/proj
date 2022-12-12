@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   root "welcome#index"
 
   get 'table', to: 'items#index'
-  get 'graphics', to: 'managers#graphics'
+  get 'graphics', to: 'items#chart'
 end
