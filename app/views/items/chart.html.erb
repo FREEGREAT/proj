@@ -1,1 +1,1 @@
-<%= line_chart Item.group_by_day(:created_at).sum(:price)%>
+<%= line_chart Item.group_by_day(:created_at).sum(:price),  colors: ["#b0b", "#666"] %>

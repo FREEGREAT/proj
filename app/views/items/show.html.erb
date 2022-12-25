@@ -1,21 +1,18 @@
-<main>
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Price</th>
-            </tr>
-          </thead>
-          <tbody id='items'>
-              <tr >
-              <%= render @item %>
-              </tr>
-          </tbody>
-        </table>
-      </div>
-</main>
-
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr  style ="color: white;">
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody id='items' style="color: white;">
+      <tr>
+      <%= render @item %>
+      </tr>
+    </tbody>
+  </table>
+</div>
 <div>
   <%= link_to edit_item_path(@item) do  %>
     <button type="button" class="btn btn-warning me-2">Edit this item</button>

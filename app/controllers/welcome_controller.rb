@@ -1,4 +1,3 @@
-class WelcomeController <  ApplicationController
-    def about
-    end
+class WelcomeController < ApplicationController
+ 
 end

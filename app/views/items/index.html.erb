@@ -1,39 +1,28 @@
 <p style="color: green"><%= notice %></p>
-
-<main>
   <h2>Items</h2>
-  
-      <div class="table-responsive ">
-        <table class="table table-hover   table-dark table-striped-columns table-sm">
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Price</th>
-              <th scope="col">Price</th>
+  <div class="table-responsive ">
+    <table class="table table-hover   table-dark table-striped-columns table-sm">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <% @items.each do |item| %>
+        <tbody id='items'>     
+          <%= render item %>
+          <td class="col--5"> 
+            <%= link_to  item  do %>
+              <button type="button" class="btn btn-success me-0">Show this item</button>
+            <% end %>
+          </td>   
+        </tbody>
+      <% end %>
+    </table>
+    <%= link_to  new_item_path do %>
+      <button type="button" class="btn btn-info me-0 "> New item</button>
+    <% end %>
+</div>
 
-            </tr>
-          </thead>
-          <% @items.each do |item| %>
-            <tbody id='items'>
-              
-                <%= render item %>
-                <td class="col--5"> 
-                  <%= link_to  item  do %>
-                    <button type="button" class="btn btn-success me-0">Show this item</button>
-                  <% end %>
-
-                </td>
-             
-            </tbody>
-          <% end %>
-
-        </table>
-         <%= link_to  new_item_path do %>
-            <button type="button" class="btn btn-info me-0 "> New item</button>
-          <% end %>
-        <div>
-
-        </div>
-      </div>
-</main>
 
